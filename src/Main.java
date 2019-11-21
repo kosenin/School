@@ -1,16 +1,18 @@
-import java.math.BigInteger;
+
+import java.util.*;
 
 public class Main {
 
 
-    public static BigInteger SquirrelFactorial(int n) {
-        BigInteger fact = BigInteger.ONE;
-        for (int i = 1; i <= n; i++) {
-            fact = fact.multiply(BigInteger.valueOf(i));
+    public static Long SquirrelFactorial(int n) {
+
+        long fact = 1;
+        for (int i = 2; i <= n; i++) {
+            fact = fact * i;
         }
         char[] smaragd = String.valueOf(fact).toCharArray();
 
-        return BigInteger.valueOf(Long.parseLong(String.valueOf(smaragd[0])));
+        return Long.parseLong(String.valueOf(smaragd[0]));
 
     }
 

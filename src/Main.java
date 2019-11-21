@@ -3,14 +3,14 @@ import java.util.*;
 
 public class Main {
 
-    public static Long SquirrelFactorial(int n) {
-        long fact = 1;
+    public static int squirrel(int n) {
+        int fact = 1;
         for (int i = 2; i <= n; i++) {
             fact = fact * i;
         }
         char[] smaragd = String.valueOf(fact).toCharArray();
 
-        return Long.parseLong(String.valueOf(smaragd[0]));
+        return Integer.parseInt(String.valueOf(smaragd[0]));
     }
 }
 
